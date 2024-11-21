@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .base{
+      background-image: url(ZKTECO-LOGO.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  .frente{
+      width: 460px;
+      height: 270px;
+      background-color:#1b1919;
+      margin-left: 80px;
+      border-radius: 18px;
+      text-align: center;
+  }
+  #text{color: white;}
+  #text2{color: green;}
+  #palavra{
+      
+  }
+  p#palavra{
+      transform: rotate(270deg);
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 0.8cm;
+      margin-top: 80px;
+      margin-left: 390px;
+  }
+  .tras{
+      width: 480px;
+      height: 270px;
+      margin-top: 40px;
+      margin-left: 80px;
+  }
+  #superior{
+      width: 460px;
+      height: 50px;
+      background-color: green;
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
+  }
+  #inferior{
+      width: 460px;
+      height: 220px;
+      background-color: black;
+      border-bottom-left-radius: 18px;
+      border-bottom-right-radius: 18px;
+  }
+  label{color:azure;}
+  fieldset{
+      width: 368px;
+      height: 13px;
+  }
+  p#site{
+      margin-right: 420px;
+      color:white;
+      transform: rotate(-270deg);
+      font-size: 0.33cm;
+  }
+  </style>
+</head>
+<body>
+  <main class="base">
+    <h1>Welcome to my website</h1>
+    <p>
+      In this webpage i am ilustrating a ZKteco card, and i which you like my
+      draw
+    </p>
+    <div class="frente">
+      <br /><br />
+      <p id="palavra"><i id="text">ZK</i><en id="text2">Teco</en></p>
+    </div>
+    <br />
+    <div class="tras">
+      <div id="superior"></div>
+      <div id="inferior" align="center">
+        <br /><br /><br />
+        <fieldset>
+          <label>The Leader of Security And Time Management Solutions</label>
+        </fieldset>
+        <br /><br />
+        <p id="site">www.zkteco.com</p>
+      </div>
+    </div>
+    <h2>So this was my job</h2>
+    <text>I now, is now equal but is similar</text>
+  </main>
+  <button onclick="toggleDivs()">Toggle Divs</button>
+  <script>
+    function toggleDivs() {
+      var frente = document.querySelector(".frente");
+      var tras = document.querySelector(".tras");
+
+      frente.classList.toggle("hidden");
+      tras.classList.toggle("hidden");
+    }
+  </script>
+</body>
+</html>

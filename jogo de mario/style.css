@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.jogo{
+    width: 80%;
+    background: linear-gradient(#87CEE5,#E6f6ff);
+    height: 500px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.tubo{
+    width: 80px;
+    position: absolute;
+    bottom: 0;
+    animation: animacao-tubo 2s infinite linear;
+}
+.mario{
+    position: absolute;
+    width: 150px;
+    bottom: 0;
+}
+.jump{
+    animation: animacao-jump 500ms ease-out;
+}
+.nuvens{
+    width: 300px;
+    position: absolute;
+    animation: animacao-nuvens 10s infinite linear;
+}
+@keyframes animacao-tubo {
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+@keyframes animacao-nuvens {
+    from{
+        right: -300px;
+    }
+    to{
+        right: 100%;
+    }
+}
+@keyframes animacao-jump {
+    0%{
+        bottom: 0px;
+    }
+    40%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}

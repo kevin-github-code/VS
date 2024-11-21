@@ -1,0 +1,34 @@
+<html>
+<head>
+<script>
+// Função para gerar a tabuada de um número
+function gerarTabuada() {
+  // Pegar o valor da caixa de texto
+  var numero = document.getElementById("numero").value;
+  // Verificar se o valor é válido
+  if (numero == "" || isNaN(numero)) {
+    alert("Por favor, digite um número válido.");
+    return;
+  }
+  // Converter o valor para número inteiro
+  numero = parseInt(numero);
+  // Criar uma variável para armazenar a tabuada
+  var tabuada = "";
+  // Usar um laço for para gerar a tabuada
+  for (var i = 1; i <= 12; i++) {
+    // Concatenar cada linha da tabuada
+    tabuada += numero + " x " + i + " = " + (numero * i) + "<br>";
+  }
+  // Mostrar a tabuada na página
+  document.getElementById("tabuada").innerHTML = tabuada;
+}
+</script>
+</head>
+<body>
+<h1>Gerador de Tabuada</h1>
+<p>Digite um número na caixa de texto e clique no botão para gerar a tabuada.</p>
+<input type="text" id="numero" placeholder="Digite um número">
+<button onclick="gerarTabuada()">Gerar Tabuada</button>
+<div id="tabuada"></div>
+</body>
+</html>
